@@ -13,6 +13,7 @@ public class Complex{
      this.real=real;
      this.imag=imag;
   }
+  
   public static Complex conjugado(Complex c){
 	  
      return new Complex(c.real, -c.imag);

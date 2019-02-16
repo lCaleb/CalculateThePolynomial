@@ -15,6 +15,7 @@ public class Graeffe {
 
     
     
+    
     public Graeffe(double[] coef) {
     	polynomialDegree=coef.length-1; 
         realRoots=new double[polynomialDegree]; 
