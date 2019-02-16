@@ -13,6 +13,8 @@ public class Graeffe {
     private static final double ZERO=0.0001;
     private double[] rootsModule=new double[2];
 
+    
+    
     public Graeffe(double[] coef) {
     	polynomialDegree=coef.length-1; 
         realRoots=new double[polynomialDegree]; 

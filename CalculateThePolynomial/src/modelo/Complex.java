@@ -14,6 +14,7 @@ public class Complex{
      this.imag=imag;
   }
   public static Complex conjugado(Complex c){
+	  
      return new Complex(c.real, -c.imag);
   }
   public static Complex opuesto(Complex c){
