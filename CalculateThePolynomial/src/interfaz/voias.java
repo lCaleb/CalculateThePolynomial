@@ -1,5 +1,8 @@
 package interfaz;
 
-public class voias {
+public class voias
+
+
+{
 
 }
