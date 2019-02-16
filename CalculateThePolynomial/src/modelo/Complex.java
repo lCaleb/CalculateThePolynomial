@@ -23,6 +23,7 @@ public class Complex{
      return Math.sqrt(real*real+imag*imag);
   }
 //devuelve el ángulo en grados
+  
   public double argumento(){
      double angulo=Math.atan2(imag, real); 
      if(angulo<0)  angulo=2*Math.PI+angulo;

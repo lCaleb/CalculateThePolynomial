@@ -29,6 +29,7 @@ public class Graeffe {
         quantityOfReals=0;
         quantityOfComplex=0;
     }
+    
 
     private void squaresTable(){
         int k,l, signo;
