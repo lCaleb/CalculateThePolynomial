@@ -1,7 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.CalculatorController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="394.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.CalculatorController">
+   <children>
+      <Label alignment="CENTER" layoutX="138.0" layoutY="21.0" prefHeight="30.0" prefWidth="336.0" style="-fx-background-color: blue; -fx-border-color: black; -fx-background-radius: 25; -fx-border-radius: 25;" text="Calculate the Polynomial" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="generarPolinomio" layoutX="206.0" layoutY="63.0" mnemonicParsing="false" onAction="#generarPolinomio" prefHeight="34.0" prefWidth="197.0" style="-fx-background-radius: 12;" text="Generar Polinomio">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="generarAleatorio" layoutX="420.0" layoutY="63.0" mnemonicParsing="false" onAction="#generarAleatorio" prefHeight="34.0" prefWidth="187.0" style="-fx-background-radius: 12;" text="Polinomio Aleatorio">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+      </Button>
+      <SplitMenuButton fx:id="seleccionGrado" layoutX="16.0" layoutY="63.0" mnemonicParsing="false" onAction="#seleccionGrado" prefHeight="34.0" prefWidth="171.0" text="Grado Polinomio">
+        <items>
+          <MenuItem fx:id="uno" mnemonicParsing="false" onAction="#uno" text="Grado 1" />
+          <MenuItem fx:id="dos" mnemonicParsing="false" onAction="#dos" text="Grado 2" />
+            <MenuItem fx:id="tres" mnemonicParsing="false" onAction="#tres" text="Grado 3" />
+            <MenuItem fx:id="cuatro" mnemonicParsing="false" onAction="#cuatro" text="Grado 4" />
+            <MenuItem fx:id="cinco" mnemonicParsing="false" onAction="#cinco" text="Grado 5" />
+            <MenuItem fx:id="seis" mnemonicParsing="false" onAction="#seis" text="Grado 6" />
+            <MenuItem fx:id="siete" mnemonicParsing="false" onAction="#siete" text="Grado 7" />
+            <MenuItem fx:id="ocho" mnemonicParsing="false" onAction="#ocho" text="Grado 8" />
+            <MenuItem fx:id="nueve" mnemonicParsing="false" onAction="#nueve" text="Grado 9" />
+            <MenuItem fx:id="diez" mnemonicParsing="false" onAction="#diez" text="Grado 10" />
+        </items>
+         <font>
+            <Font name="Arial Rounded MT Bold" size="14.0" />
+         </font>
+      </SplitMenuButton>
+      <GridPane fx:id="polinomio" layoutX="28.0" layoutY="197.0" prefHeight="30.0" prefWidth="557.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
 </AnchorPane>
