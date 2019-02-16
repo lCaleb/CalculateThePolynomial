@@ -32,6 +32,8 @@ public class Graeffe {
             	squaresMatrix[m][j]=0.0;
             }
         }
+        
+        
         quantityOfReals=0;
         quantityOfComplex=0;
     }
