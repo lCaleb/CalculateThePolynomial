@@ -16,7 +16,10 @@ public class Graeffe {
     
     
     
+    
     public Graeffe(double[] coef) {
+    	
+    	
     	polynomialDegree=coef.length-1; 
         realRoots=new double[polynomialDegree]; 
         squaresMatrix= new double[MAX_ITER][polynomialDegree+1];
