@@ -15,11 +15,14 @@ public class Graeffe {
 
     
     
-    
+    /**
+     * this method adds the polynomial coefficients 
+     * to a matrix mxn in row 0, and full is rest of the matrix of zeros.
+     * @param coef is the array that contains the polynomial coefficients
+     */
     
     public Graeffe(double[] coef) {
-    	
-    	
+ 
     	polynomialDegree=coef.length-1; 
         realRoots=new double[polynomialDegree]; 
         squaresMatrix= new double[MAX_ITER][polynomialDegree+1];
@@ -79,6 +82,8 @@ pajuera:// label que detiene el ciclo anidado B)
             pot2*=2;
         }
     }
+    
+    
 //valor de un polinomio para una variable real
     public double polynomialValue(double x){
         double y=0.0;
@@ -94,6 +99,8 @@ pajuera:// label que detiene el ciclo anidado B)
         }
         return y;
     }
+    
+   
     public Complex polynomialValue(Complex x){
         Complex y=new Complex();
         for(int i=0; i<polynomialDegree+1; i++){
@@ -103,6 +110,8 @@ pajuera:// label que detiene el ciclo anidado B)
         return y;
     }
 
+    
+    
     private void simpleRealRoot(int j){
 //valor absoluto de la raíz
        // System.out.println("Raiz simple");
@@ -115,6 +124,8 @@ pajuera:// label que detiene el ciclo anidado B)
         quantityOfReals++;
     }
 
+    
+    
     private void doubleRealRoot(int j){
 //valor absoluto de la raíz
         double logaritmo=(Math.log(squaresMatrix[m][j+1])-Math.log(squaresMatrix[m][j-1]))/(2*pot2);
@@ -140,6 +151,9 @@ pajuera:// label que detiene el ciclo anidado B)
         }
     }
 
+    
+    
+    
     private void oneComlexRoot(){
         double suma=0.0;
         for(int i=0; i<quantityOfReals; i++){
@@ -151,6 +165,8 @@ pajuera:// label que detiene el ciclo anidado B)
         complexRoot[0]=new Complex(u, v);
         complexRoot[1]=new Complex(u, -v);
     }
+    
+    
     private void twoComplexRoot(){
         double suma=0.0;
         double producto=1.0;
@@ -175,6 +191,8 @@ pajuera:// label que detiene el ciclo anidado B)
         complexRoot[3]=new Complex(u2, -v2);
     }
 
+    
+    
     private boolean changeSign(int j){
         double logaritmo;
         for(int k=2; k<=m; k++){
@@ -189,6 +207,8 @@ pajuera:// label que detiene el ciclo anidado B)
         }
         return false;
     }
+    
+    
 
     public void findRoots(){
         squaresTable();
@@ -239,12 +259,4 @@ pajuera:// label que detiene el ciclo anidado B)
 
 
 
-class ExcepcionDivideCero extends Exception {
 
-  public ExcepcionDivideCero() {
-         super();
-  }
-  public ExcepcionDivideCero(String s) {
-         super(s);
-  }
-}

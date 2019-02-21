@@ -6,6 +6,7 @@ public class Complex{
      private double imag;
 
   public Complex() {
+	  
      real=0.0;
      imag=0.0;
   }
