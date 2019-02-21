@@ -13,6 +13,7 @@ public class Graeffe {
     private static final double ZERO=0.0001;
     private double[] rootsModule=new double[2];
 
+    private String granCadena;
     
     
     /**
@@ -238,21 +239,23 @@ pajuera:// label que detiene el ciclo anidado B)
      }
 
 
-    public void showRoots(){
+    public String showRoots(){
         findRoots();
+        granCadena="";
 //raíces reales
-        System.out.println("Raíces reales");
+        granCadena+="Raíces reales";
         for(int i=0; i<quantityOfReals; i++){
-            System.out.println((double)Math.round(realRoots[i]*100)/100+" --->"+polynomialValue(realRoots[i]));
+        	granCadena+="\n"+(double)Math.round(realRoots[i]*100)/100+" --->"+polynomialValue(realRoots[i]);
         }
-        System.out.println("");
+        granCadena+="\n";
 //raíces complejas
-        System.out.println("Raíces complejas");
+        granCadena+="\n"+"Raíces complejas";
         for(int i=0; i<quantityOfComplex; i++){
-            System.out.println(complexRoot[2*i]+" --->  "+polynomialValue(complexRoot[2*i]));
-            System.out.println(complexRoot[2*i+1]+" --->  "+polynomialValue(complexRoot[2*i]));
+        	granCadena+="\n"+complexRoot[2*i]+" --->  "+polynomialValue(complexRoot[2*i]);
+        	granCadena+="\n"+complexRoot[2*i+1]+" --->  "+polynomialValue(complexRoot[2*i]);
         }
-        System.out.println("");
+        granCadena+="\n";
+        return granCadena;
     }
 }
 

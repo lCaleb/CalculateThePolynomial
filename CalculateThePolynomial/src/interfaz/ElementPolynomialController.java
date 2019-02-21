@@ -11,8 +11,10 @@ import com.sun.javafx.sg.prism.NGNode;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class ElementPolynomialController  {
@@ -25,10 +27,14 @@ public class ElementPolynomialController  {
 
 	@FXML
 	private Label signo;
+	
+	
 
 	public ElementPolynomialController(){
 		
 	}
+	
+	
 
 	public void setExponent(int value) {
 		this.exponente.setText(value + "");

@@ -17,7 +17,7 @@
    <children>
       <ImageView fitHeight="394.0" fitWidth="770.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../../../Desktop/interfazPolinomios/background.jpg" />
+            <Image url="@../../images/background.jpg" />
          </image>
       </ImageView>
       <Label alignment="CENTER" layoutX="166.0" layoutY="14.0" prefHeight="39.0" prefWidth="426.0" style="-fx-background-color: trasparent; -fx-border-color: trasparent; -fx-background-radius: 25; -fx-border-radius: 25;" text="Calculate the Polynomial" textFill="WHITE">
@@ -70,11 +70,19 @@
             <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
          </columnConstraints>
       </GridPane>
-      <Button fx:id="calcular" layoutX="16.0" layoutY="197.0" mnemonicParsing="false" style="-fx-border-radius: 15; -fx-background-radius: 15;" text="Calcular y mostrar Raices">
+      <Button fx:id="calcular" layoutX="16.0" layoutY="197.0" mnemonicParsing="false" onMouseClicked="#calcular" style="-fx-border-radius: 15; -fx-background-radius: 15;" text="Calcular y mostrar Raices">
          <font>
             <Font name="Arial Rounded MT Bold" size="12.0" />
          </font>
       </Button>
-      <TextArea fx:id="mostrarRaices" layoutX="16.0" layoutY="231.0" prefHeight="143.0" prefWidth="440.0" />
+      <TextArea fx:id="mostrarRaices" layoutX="16.0" layoutY="231.0" prefHeight="143.0" prefWidth="440.0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="13.0" />
+         </font></TextArea>
+      <ImageView fitHeight="181.0" fitWidth="208.0" layoutX="519.0" layoutY="191.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../images/graeffe.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

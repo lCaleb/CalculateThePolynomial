@@ -5,10 +5,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SplitMenuButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Font;
+import modelo.Graeffe;
 
 
 public class CalculatorController {
@@ -31,6 +33,12 @@ public class CalculatorController {
 		@FXML private MenuItem ocho;
 		@FXML private MenuItem nueve;
 		@FXML private MenuItem diez;
+		
+		@FXML
+		private TextArea mostrarRaices;
+		
+		@FXML
+		private Button calcular;
 
 		@FXML private GridPane polinomio;
 		
@@ -38,6 +46,7 @@ public class CalculatorController {
 		
 		private int polynomialDegree;
 		
+		private Graeffe graefe;
 		public CalculatorController() {
 			
 		}
@@ -55,6 +64,19 @@ public class CalculatorController {
 //		}
 		
 		public void initialize() {
+			
+		}
+		
+		public void calcular() {
+			double[] poly= new double[polynomialDegree+1];
+			int i = 0;
+			for (; i < poly.length-1; i++) {
+				ElementPolynomial element= (ElementPolynomial)polinomio.getChildren().get(i);
+				poly[i]=element.getCoeficiente();
+			}
+			poly[i]=Integer.parseInt(independient.getText());
+			graefe= new Graeffe(poly);
+			mostrarRaices.setText(graefe.showRoots());
 			
 		}
 		
