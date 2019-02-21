@@ -4,17 +4,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="394.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.CalculatorController">
+<AnchorPane prefHeight="394.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaz.CalculatorController">
    <children>
-      <Label alignment="CENTER" layoutX="138.0" layoutY="21.0" prefHeight="30.0" prefWidth="336.0" style="-fx-background-color: blue; -fx-border-color: black; -fx-background-radius: 25; -fx-border-radius: 25;" text="Calculate the Polynomial" textFill="WHITE">
+      <ImageView fitHeight="394.0" fitWidth="770.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../Desktop/interfazPolinomios/background.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="92.0" layoutY="14.0" prefHeight="39.0" prefWidth="426.0" style="-fx-background-color: trasparent; -fx-border-color: trasparent; -fx-background-radius: 25; -fx-border-radius: 25;" text="Calculate the Polynomial" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="24.0" />
+            <Font name="Arial Rounded MT Bold" size="34.0" />
          </font>
       </Label>
       <Button fx:id="generarPolinomio" layoutX="206.0" layoutY="63.0" mnemonicParsing="false" onAction="#generarPolinomio" prefHeight="34.0" prefWidth="197.0" style="-fx-background-radius: 12;" text="Generar Polinomio">
@@ -44,13 +51,23 @@
             <Font name="Arial Rounded MT Bold" size="14.0" />
          </font>
       </SplitMenuButton>
-      <GridPane fx:id="polinomio" layoutX="28.0" layoutY="197.0" prefHeight="30.0" prefWidth="557.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
+      <GridPane fx:id="polinomio" layoutX="11.0" layoutY="130.0" prefHeight="30.0" prefWidth="557.0">
         <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="45.0" minHeight="45.0" prefHeight="45.0" vgrow="SOMETIMES" />
         </rowConstraints>
+         <columnConstraints>
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+            <ColumnConstraints maxWidth="68.0" minWidth="68.0" prefWidth="68.0" />
+         </columnConstraints>
       </GridPane>
    </children>
 </AnchorPane>
