@@ -80,6 +80,23 @@ public class CalculatorController {
 			
 		}
 		
+	
+		public void ponerAleatorio() {
+			polynomialDegree= (int)(Math.random()*9)+1;
+			System.out.println(polynomialDegree+"");
+			generarPolinomio();
+			int i = 0;
+			for (; i < polynomialDegree; i++) {
+				ElementPolynomial element= (ElementPolynomial)polinomio.getChildren().get(i);
+				int random= (int)(Math.random()*1000)+1;
+				element.setCoeficiente(random);
+			}
+			int randomi= (int)(Math.random()*1000)+1;
+			independient.setText(randomi+"");
+			
+		}
+		
+		
 		public void loadPolynommial(int degree) {
 			int i=0;
 			for (; i < degree-1; i++) {

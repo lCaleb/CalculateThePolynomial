@@ -30,7 +30,7 @@
             <Font name="Arial Rounded MT Bold" size="16.0" />
          </font>
       </Button>
-      <Button fx:id="generarAleatorio" layoutX="494.0" layoutY="63.0" mnemonicParsing="false" onAction="#generarAleatorio" prefHeight="34.0" prefWidth="187.0" style="-fx-background-radius: 12;" text="Polinomio Aleatorio">
+      <Button fx:id="generarAleatorio" layoutX="494.0" layoutY="63.0" mnemonicParsing="false" onAction="#generarAleatorio" onMouseClicked="#ponerAleatorio" prefHeight="34.0" prefWidth="187.0" style="-fx-background-radius: 12;" text="Polinomio Aleatorio">
          <font>
             <Font name="Arial Rounded MT Bold" size="16.0" />
          </font>
