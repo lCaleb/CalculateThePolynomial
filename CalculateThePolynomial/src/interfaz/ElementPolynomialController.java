@@ -40,6 +40,9 @@ public class ElementPolynomialController  {
 		signo.setText(value + "");
 	}
 
+	public void setCoeficiente(int value) {
+		coeficiente.setText(value +"");
+	}
 	public int getCoeficiente() {
 		return Integer.parseInt(coeficiente.getText());
 	}

@@ -34,6 +34,9 @@ public class ElementPolynomial extends Pane{
 	public void setExponent(int value) {
 		controller.setExponent(value);
 	}
+	public void setCoeficiente(int value) {
+		controller.setCoeficiente(value);
+	}
 	public void setExponent() {
 		controller.setExponent();
 	}
